@@ -3,7 +3,7 @@ Description=OpenCloud collaboration container
 
 [Container]
 ContainerName=opencloud-collaboration
-Image=docker.io/opencloudeu/opencloud-rolling:4
+Image=docker.io/opencloudeu/opencloud:latest
 AutoUpdate=registry
 Timezone=Europe/Paris
 
