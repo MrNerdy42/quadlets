@@ -5,7 +5,7 @@ Documentation=https://docs.opencloud.eu/docs/admin/getting-started/container/doc
 
 [Container]
 ContainerName=opencloud-server
-Image=docker.io/opencloudeu/opencloud-rolling:4
+Image=docker.io/opencloudeu/opencloud:latest
 AutoUpdate=registry
 Timezone=Europe/Paris
 
@@ -60,6 +60,17 @@ Environment=FRONTEND_CHECK_FOR_UPDATES=true
 Environment=PROXY_CSP_CONFIG_FILE_LOCATION=/etc/opencloud/csp.yaml
 # enable to allow using the banned passwords list
 Environment=OC_PASSWORD_POLICY_BANNED_PASSWORDS_LIST=banned-password-list.txt
+Environment=OC_SHARING_PUBLIC_SHARE_MUST_HAVE_PASSWORD=true
+Environment=OC_SHARING_PUBLIC_WRITEABLE_SHARE_MUST_HAVE_PASSWORD=false
+Environment=OC_PASSWORD_POLICY_DISABLED=false
+Environment=OC_PASSWORD_POLICY_MIN_CHARACTERS=8
+Environment=OC_PASSWORD_POLICY_MIN_LOWERCASE_CHARACTERS=1
+Environment=OC_PASSWORD_POLICY_MIN_UPPERCASE_CHARACTERS=1
+Environment=OC_PASSWORD_POLICY_MIN_DIGITS=0
+Environment=OC_PASSWORD_POLICY_MIN_SPECIAL_CHARACTERS=0
+# default language for services/WebUI; defaults to English, language code (ISO 639-1, e.g. de, en, fr)
+Environment=OC_DEFAULT_LANGUAGE=en
+
 # reverse proxy address
 Environment=PROXY_HTTP_ADDR="0.0.0.0:9200"
 
