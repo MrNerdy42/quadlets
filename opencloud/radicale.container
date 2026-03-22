@@ -1,0 +1,24 @@
+[Unit]
+Description="Radicale Container"
+
+[Container]
+ContainerName=opencloud-radicale
+Image=docker.io/opencloudeu/radicale:latest
+AutoUpdate=registry
+
+Volume=./radicale-config:/etc/radicale/config:idmap
+Volume=/home/containers/opencloud/radicale-data:/var/lib/radicale:idmap
+
+User=1000:1000
+ReadOnly=true
+NoNewPrivileges=true
+DropCapability=all
+
+Pod=opencloud.pod
+
+[Service]
+TimeoutStartSec=90
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

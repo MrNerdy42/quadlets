@@ -13,6 +13,6 @@ _(Note: this describes the step to follow for a conventional secured rootful set
     sudo chown -R 1000:1000 /home/containers/navidrome
    ```
 5. Run `systemctl daemon-reload`
-6. Run `systemctl start navidrome
+6. Run `systemctl start navidrome`
 
 
