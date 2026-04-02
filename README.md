@@ -1,4 +1,9 @@
-# Podman quadlets
+# Fork Disclaimer
+This project is a fork, created for my own experimentation. I claim no credit nor liability for its contents. Thank you to the original author for providing me an excellent starting point for managing a quadlet-based homelab.
+
+# Original README
+
+## Podman quadlets
 
 This is a personnal collection of Podman Quadlets hardened to properly secure self hosted services.
 
